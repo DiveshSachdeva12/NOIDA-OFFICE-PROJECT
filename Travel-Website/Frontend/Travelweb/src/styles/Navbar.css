@@ -1,0 +1,433 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    padding-top: 120px;
+}
+
+/* Navbar Styles */
+#navbar {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 55px;
+    z-index: 1000;
+}
+
+/* Top Bar */
+.top-bar {
+    position: fixed;
+    top: 0.1px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1100;
+}
+
+/* Heading Styles */
+#head-img {
+    width: 30%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Location Text */
+#location {
+    font-size: 1rem;
+    color: rgb(82, 80, 80);
+}
+
+/* Navbar Items */
+#nav-item {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #1d3557 !important;
+    font-weight: bold;
+    gap: 5px;
+}
+
+/* Navbar Item Hover Effect */
+#nav-item .nav-link {
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+#nav-item .nav-link:hover {
+    color: #e36414 !important;
+}
+
+#nav-item .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #e36414;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+#nav-item .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Button Box */
+#button-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Toll-Free Number */
+#tollfreee {
+    position: relative;
+    left: -16rem;
+    font-size: 0.10;
+    color: rgb(92, 90, 90);
+}
+
+/* Dropdown Icon */
+.dropdown-icon {
+    position: relative;
+    left: 0.5rem;
+    top: -0.1rem;
+}
+
+/* Top Bar Item */
+#top-bar-item {
+    color: rgb(92, 90, 90);
+    font-size: 1rem;
+}
+
+/* Book Now & Manage Booking Buttons */
+#button-box-book, #button-box-manage {
+    background-color: #364d9d;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 18px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    position: relative;
+    left: -8rem;
+}
+
+#button-box-book:hover, #button-box-manage:hover {
+    background-color: #2a3b80;
+    transform: scale(1.05);
+}
+
+/* Location Dropdown */
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    margin-left: 5rem;
+}
+
+.dropdown-select {
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    background: white;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-select:hover {
+    background: #f1f1f1;
+}
+
+/* Toll-Free & Top Bar */
+#toll-free {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#button-dropdown {
+    margin-left: -8rem;
+    z-index: 1001;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+}
+
+/*  */
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    #button-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #button-box-book, #button-box-manage {
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-container {
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #navbar {
+        padding: 8px 0;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+        padding: 8px 10px;
+    }
+
+    #nav-item {
+        font-size: 1rem;
+    }
+
+    #button-box {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .dropdown-container {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #navbar {
+        top: 0;
+        padding: 6px 0;
+    }
+
+    .top-bar {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    #nav-item {
+        font-size: 0.9rem;
+    }
+
+    #button-box {
+        flex-direction: column;
+    }
+
+    #button-box-book, #button-box-manage {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .dropdown-container {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-select {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #navbar {
+        padding: 5px 0;
+        height: 120px;
+    }
+    #head-img{
+        position: relative;
+        top:1rem;
+        left: 1rem;
+        height: 40px;
+        width: 80px;
+    }
+    .top-bar {
+        font-size: 12px;
+    }
+
+    #nav-item {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    #button-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #button-box-book{
+        font-size: 12px;
+        padding: 7px 12px;
+        width: 60%;
+        /* text-align: center; */
+    }
+    #button-box-manage {
+        font-size: 12px;
+        /* padding: 6px 10px; */
+        margin-top: -19rem;
+        margin-left: rem;
+        width: 50px;
+    }
+    .dropdown-container {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-select {
+        width: 100%;
+    }
+    .navbar-toggler {
+        margin-left: 11rem;
+        background-color: #364d9d; /* Blue background */
+        color: white; /* White icon */
+        border: none;
+        /* margin-top: -2rem; */
+        position: relative;
+        top: -2rem;
+        
+        height: 40px;
+    }
+    .navbar-collapse{
+        margin-top: -3rem;
+        margin-left: -1rem;
+    }
+    
+}
+
+/* it give the white color so that we are using at the responsive time  */
+.navbar-toggler-icon {
+    filter: invert(1); /* Makes the icon white */
+}
+
+
+
+
+/* Responsive Adjustments */
+
+    
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap; /* Allows wrapping if screen size is small */
+    position: fixed; /* Sticks to the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures it covers full width */
+    z-index: 1001; /* Ensures it stays above other elements */
+}
+
+
+/* Toll-Free Section */
+#toll-free {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    #toll-free {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+       display: none;
+    }
+
+    #toll-free {
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-bar {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    #toll-free {
+        font-size: 10px;
+        gap: 2px;
+    }
+}
+
+.navbar-toggler {
+    border: none; /* Optional: Remove border for a clean look */
+    outline: none;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    /* margin-bottom: 3rem; */
+}
+
+.navbar-collapse {
+    transition: all 0.3s ease-in-out;
+    width: 100%; /* Prevents weird shifting */
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        position: relative;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white; /* Ensure visibility */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+}
