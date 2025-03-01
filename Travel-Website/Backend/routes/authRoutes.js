@@ -1,14 +1,14 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const User = require("../models/user"); // ✅ Ensure correct path
+const User = require("../models/User");
 
-const router = express.Router(); // ✅ Define router
+const router = express.Router();
 
-// 🔹 Register User
+// ✅ Register User
 router.post("/register", async (req, res) => {
     try {
-        console.log("🔹 Registration Request Received:", req.body);
+        console.log("🔹 Registration Request:", req.body);
 
         const { name, email, password } = req.body;
         if (!name || !email || !password) {
@@ -32,10 +32,10 @@ router.post("/register", async (req, res) => {
     }
 });
 
-// 🔹 Login User
+// ✅ Login User
 router.post("/login", async (req, res) => {
     try {
-        console.log("🔹 Login Request Received:", req.body);
+        console.log("🔹 Login Request:", req.body);
 
         const { email, password } = req.body;
         if (!email || !password) {
